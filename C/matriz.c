@@ -90,3 +90,30 @@ void imprime_matriz(Matriz* M){
     }
 }
 
+Matriz* soma_matriz(Matriz* A, Matriz* B) {
+    if (A->m != B->m || A->n != B->n) {
+        printf("Erro: Matrizes de tamanhos diferentes.\n");
+        return NULL;
+    }
+    Matriz* C = cria_matriz(A->m, A->n);
+    for (int i = 0; i < A->m; i++) {
+        for (int j = 0; j < A->n; j++) {
+            C->matriz[i][j] = A->matriz[i][j] + B->matriz[i][j];
+        }
+    }
+    return C;
+}
+
+Matriz* subtrai_matriz(Matriz* A, Matriz* B) {
+    if (A->m != B->m || A->n != B->n) {
+        printf("Erro: Matrizes de tamanhos diferentes.\n");
+        return NULL;
+    }
+    Matriz* C = cria_matriz(A->m, A->n);
+    for (int i = 0; i < A->m; i++) {
+        for (int j = 0; j < A->n; j++) {
+            C->matriz[i][j] = A->matriz[i][j] - B->matriz[i][j];
+        }
+    }
+    return C;
+}
