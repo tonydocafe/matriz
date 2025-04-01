@@ -18,6 +18,7 @@ Matriz* soma_matriz(Matriz* A, Matriz* B);
 Matriz* subtrai_matriz(Matriz* A, Matriz* B);
 Matriz* transposta(Matriz* M);
 double determinante(Matriz* M);
+void salva_matriz_arquivo(Matriz* M, const char* nomeArquivo);
 Matriz* lerMatrizDoArquivo(FILE *arquivo, int tam);
    
 
