@@ -117,3 +117,76 @@ Matriz* subtrai_matriz(Matriz* A, Matriz* B) {
     }
     return C;
 }
+
+
+Matriz* transposta(Matriz* M) {
+    Matriz* T = cria_matriz(M->n, M->m);
+    for (int i = 0; i < M->m; i++) {
+        for (int j = 0; j < M->n; j++) {
+            T->matriz[j][i] = M->matriz[i][j];
+        }
+    }
+    return T;
+}
+
+void salva_matriz_arquivo(Matriz* M, const char* nomeArquivo) {
+    FILE* arquivo = fopen(nomeArquivo, "w");
+    if (!arquivo) {
+        printf("Erro ao abrir arquivo.\n");
+        return;
+    }
+    fprintf(arquivo, "%d %d\n", M->m, M->n);
+    for (int i = 0; i < M->m; i++) {
+        for (int j = 0; j < M->n; j++) {
+            fprintf(arquivo, "%.2lf ", M->matriz[i][j]);
+        }
+        fprintf(arquivo, "\n");
+    }
+    fclose(arquivo);
+}
+
+
+double determinante(Matriz* M) {
+    if (M->m != M->n) {
+        printf("Erro: Determinante só pode ser calculado para matrizes quadradas.\n");
+        return 0;
+    }
+
+    int n = M->m;
+
+    // Caso base: matriz 1x1
+    if (n == 1) {
+        return M->matriz[0][0];
+    }
+
+    // Caso base: matriz 2x2
+    if (n == 2) {
+        return (M->matriz[0][0] * M->matriz[1][1]) - (M->matriz[0][1] * M->matriz[1][0]);
+    }
+
+    // Expansão de Laplace para matriz maior que 2x2
+    double det = 0;
+    for (int j = 0; j < n; j++) {
+        // Criar submatriz removendo a linha 0 e a coluna j
+        Matriz* subMatriz = cria_matriz(n - 1, n - 1);
+        
+        for (int i = 1; i < n; i++) {  // Ignorando a linha 0
+            int subCol = 0;
+            for (int k = 0; k < n; k++) {
+                if (k == j) continue;  // Ignorando a coluna j
+                subMatriz->matriz[i - 1][subCol] = M->matriz[i][k];
+                subCol++;
+            }
+        }
+
+        // Recursão para calcular determinante da submatriz
+        double subDet = determinante(subMatriz);
+        destroi_matriz(subMatriz);
+
+        // Aplicação da fórmula de Laplace: (-1)^j * elemento * subdeterminante
+        det += (j % 2 == 0 ? 1 : -1) * M->matriz[0][j] * subDet;
+    }
+
+    return det;
+}
+
