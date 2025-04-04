@@ -51,8 +51,7 @@ int main() {
     
     
     altera_elemento(A,linhaA,colunaA,novoA);
-    printf("\nMatriz A:\n");
-    imprime_matriz(A);
+
     altera_elemento(B,linhaB,colunaB,novoB);
 
     printf("\ndigite um escalar para multiplicar as matrizes:\n");
