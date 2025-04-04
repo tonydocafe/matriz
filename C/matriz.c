@@ -56,6 +56,8 @@ Matriz* multiplicacao(Matriz* M,Matriz* N){
 
 void altera_elemento(Matriz* M, int m, int n, double novo_valor){
     M->matriz[m][n] = novo_valor;
+    printf("\nMatriz com novo valor fica:\n");
+    imprime_matriz(M);
 }
 
 
