@@ -42,15 +42,15 @@ int main() {
     printf("novo numero:");
     scanf("%lf",&novoA);
     
+    altera_elemento(A,linhaA,colunaA,novoA);
+
+    
     printf("\naltere um numero na matriz B\nlinha:");
     scanf("%i",&linhaB);
     printf("coluna:");
     scanf("%i",&colunaB);
     printf("novo numero:");
     scanf("%lf",&novoB);
-    
-    
-    altera_elemento(A,linhaA,colunaA,novoA);
 
     altera_elemento(B,linhaB,colunaB,novoB);
 
