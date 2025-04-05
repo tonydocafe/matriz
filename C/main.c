@@ -73,11 +73,13 @@ int main() {
     printf("\n A subtração das matrizes fica:\n");
     imprime_matriz(T);
 
+
     double determinanteA = determinante(A);
     printf("\n O determinante da Matriz A é:\n %lf", determinanteA);
     
+  
     double determinanteB = determinante(B);
-    printf("\n O determinante da Matriz B é:\n %lf\n", determinanteB);
+    printf("\n O determinante da Matriz B é:\n %lf \n", determinanteB);
 
     
 
