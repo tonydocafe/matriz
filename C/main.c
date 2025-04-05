@@ -33,7 +33,7 @@ int main() {
     double diagoB = soma_diagonal_superior(B);
     printf("\na soma da diagonal superior da matriz \nA : %.1lf \nB : %.1lf\n",diagoA,diagoB);
   
-    double novoA, novoB;
+  
     
     printf("\naltere um numero na matriz A\nlinha:");
     scanf("%i",&linhaA);
