@@ -71,6 +71,7 @@ int main() {
 
     Matriz* T = subtrai_matriz(A,B);
     printf("\n A subtração das matrizes fica:\n");
+    imprime_matriz(T);
     
 
     
