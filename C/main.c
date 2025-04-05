@@ -77,7 +77,7 @@ int main() {
     printf("\n O determinante da Matriz A é:\n %lf", determinanteA);
     
     double determinanteB = determinante(B);
-    printf("\n O determinante da Matriz B é:\n %lf", determinanteB);
+    printf("\n O determinante da Matriz B é:\n %lf\n", determinanteB);
 
     
 
