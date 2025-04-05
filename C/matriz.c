@@ -55,18 +55,21 @@ Matriz* multiplicacao(Matriz* M,Matriz* N){
 
 
 void altera_elemento(Matriz* M, int m, int n, double novo_valor){
-    
-    
-    if (m && n == 0){
+    int  x = 10 ;
+   int recebe_n;
+   
+    while (x == 10){
+       
+        if (m && n == 0){
+            M->matriz[m][n] = novo_valor;
+        }else{
+            M->matriz[m-1][n-1] = novo_valor;
+        }
+        
         M->matriz[m][n] = novo_valor;
-    }else{
-        M->matriz[m-1][n-1] = novo_valor;
+        printf("\nMatriz com novo valor fica:\n");
+        imprime_matriz(M);
     }
-    
-    M->matriz[m][n] = novo_valor;
-    printf("\nMatriz com novo valor fica:\n");
-    imprime_matriz(M);
-}
 
 
 Matriz* lerMatrizDoArquivo(FILE *arquivo, int tam) {
