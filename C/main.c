@@ -36,10 +36,7 @@ int main() {
   
     
     printf("\naltere um numero na matriz A:");
-    scanf("%i",&linhaA);
-    printf("coluna:");
-    scanf("%i",&colunaA);
-    printf("novo numero:");
+ 
     scanf("%lf",&novoA);
     
     altera_elemento(A);
