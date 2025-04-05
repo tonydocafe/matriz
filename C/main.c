@@ -81,7 +81,7 @@ int main() {
     printf("\nteste para determinante A:\n");
     imprime_matriz(A);
     double determinanteA = determinante(A);
-    printf("\n O determinante da Matriz A é:\n%lf", determinanteA);
+    printf("\nO determinante da Matriz A é:\n%lf", determinanteA);
     
     printf("\nteste para determinante B:\n");
     imprime_matriz(B);
