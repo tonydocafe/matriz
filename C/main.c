@@ -29,6 +29,7 @@ int main() {
     printf("\nResultado da multiplicacao:\n");
     imprime_matriz(Z);
     
+    
     double diagoA = soma_diagonal_superior(A);
     double diagoB = soma_diagonal_superior(B);
     printf("\na soma da diagonal superior da matriz \nA : %.1lf \nB : %.1lf\n",diagoA,diagoB);
@@ -66,6 +67,8 @@ int main() {
 
     Matriz* S = soma_matriz(A,B);
     printf("\n A soma das matrizes fica:\n");
+    imprime_matriz(S);
+
     
     destroi_matriz(A);
     destroi_matriz(B);
