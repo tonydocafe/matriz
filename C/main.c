@@ -61,17 +61,21 @@ int main() {
     
     printf("\nTransposta A:\n");
     imprime_matriz(transpostaA);
+    salva_matriz_arquivo(transpostaA, "saida.txt");
 
     printf("\nTransposta B:\n");
     imprime_matriz(transpostaB);
+    salva_matriz_arquivo(transpostaB, "saida.txt");
 
     Matriz* S = soma_matriz(A,B);
     printf("\nA soma das matrizes fica:\n");
     imprime_matriz(S);
+    salva_matriz_arquivo(S, "saida.txt");
 
     Matriz* T = subtrai_matriz(A,B);
-    printf("\n A subtração das matrizes fica:\n");
+    printf("\nA subtração das matrizes fica:\n");
     imprime_matriz(T);
+    salva_matriz_arquivo(T, "saida.txt");
 
 
     printf("\nteste para determinante A:\n");
@@ -84,10 +88,6 @@ int main() {
     double determinanteB = determinante(B);
     printf("\n O determinante da Matriz B é:\n %lf \n", determinanteB);
 
-    salva_matriz_arquivo(transpostaA, "saida.txt");
-    salva_matriz_arquivo(transpostaB, "saida.txt");
-    salva_matriz_arquivo(S, "saida.txt");
-    salva_matriz_arquivo(T, "saida.txt");
 
     
     destroi_matriz(A);
