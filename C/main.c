@@ -42,7 +42,7 @@ int main() {
     altera_elemento(A);
 
     
-    printf("\naltere um numero na matriz B\nlinha:");
+    printf("\naltere um numero na matriz B:");
 
     
     altera_elemento(B);
