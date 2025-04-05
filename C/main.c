@@ -29,11 +29,7 @@ int main() {
     printf("\nResultado da multiplicacao:\n");
     imprime_matriz(Z);
 
-    Matriz* transpostaA = transposta(A);
-    Matriz* transpostaB = transposta(B);
-    
-    printf("\nTransposta A:\n");
-    imprime_matriz(transpostaA);
+   
     
     
     printf("\nTransposta B:\n");
@@ -65,6 +61,11 @@ int main() {
     multiplicacao_escalar(B,escalar);
     imprime_matriz(B);
     printf("\n");
+    Matriz* transpostaA = transposta(A);
+    Matriz* transpostaB = transposta(B);
+    
+    printf("\nTransposta A:\n");
+    imprime_matriz(transpostaA);
     destroi_matriz(A);
     destroi_matriz(B);
     destroi_matriz(Z);
