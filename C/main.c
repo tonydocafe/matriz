@@ -26,6 +26,9 @@ int main() {
 
     Matriz* Z = multiplicacao(A, B);
     Matriz* transpostaA = transposta(A);
+    Matriz* transpostaB = transposta(B);
+    
+
     
     printf("\nResultado da multiplicacao:\n");
     imprime_matriz(Z);
