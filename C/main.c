@@ -63,6 +63,8 @@ int main() {
 
     printf("\nTransposta B:\n");
     imprime_matriz(transpostaB);
+
+    Matriz* S = soma_matriz(A,B);
     
     destroi_matriz(A);
     destroi_matriz(B);
