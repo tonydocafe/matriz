@@ -32,7 +32,8 @@ int main() {
     Matriz* transpostaA = transposta(A);
     Matriz* transpostaB = transposta(B);
     
-
+    printf("\nTransposta A:\n");
+    imprime_matriz(transpostaA);
     
 
     
