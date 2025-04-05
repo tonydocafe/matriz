@@ -35,7 +35,7 @@ int main() {
   
   
     
-    printf("\naltere um numero na matriz A\nlinha:");
+    printf("\naltere um numero na matriz A:");
     scanf("%i",&linhaA);
     printf("coluna:");
     scanf("%i",&colunaA);
