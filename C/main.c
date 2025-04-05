@@ -66,7 +66,7 @@ int main() {
     imprime_matriz(transpostaB);
 
     Matriz* S = soma_matriz(A,B);
-    printf("\n A soma das matrizes fica:\n");
+    printf("\nA soma das matrizes fica:\n");
     imprime_matriz(S);
 
     Matriz* T = subtrai_matriz(A,B);
