@@ -66,6 +66,8 @@ void altera_elemento(Matriz* M, int m, int n, double novo_valor){
             M->matriz[m-1][n-1] = novo_valor;
         }
         
+        printf("Deseja ver a matriz te 9)\nDeseja Alterar mais numeros ?(Digite 10)\nDeseja continuar com a operações digite ? (Digite 0)\n");
+
         M->matriz[m][n] = novo_valor;
         printf("\nMatriz com novo valor fica:\n");
         imprime_matriz(M);
