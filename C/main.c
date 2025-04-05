@@ -74,6 +74,8 @@ int main() {
     imprime_matriz(T);
 
     double determinanteA = determinante(A);
+    printf("\n O determinante da Matriz A é:\n");
+    
     
 
     
