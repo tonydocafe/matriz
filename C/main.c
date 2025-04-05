@@ -73,6 +73,9 @@ int main() {
     printf("\n A subtração das matrizes fica:\n");
     imprime_matriz(T);
 
+    double determinanteA(A);
+    
+
     
 
     
