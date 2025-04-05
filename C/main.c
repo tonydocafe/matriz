@@ -85,6 +85,9 @@ int main() {
     printf("\n O determinante da Matriz B é:\n %lf \n", determinanteB);
 
     salva_matriz_arquivo(transpostaA, "saida.txt");
+    salva_matriz_arquivo(transpostaB, "saida.txt");
+    salva_matriz_arquivo(S, "saida.txt");
+    salva_matriz_arquivo(T, "saida.txt");
 
     
     destroi_matriz(A);
