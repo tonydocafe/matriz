@@ -25,7 +25,8 @@ int main() {
     imprime_matriz(B);
 
     Matriz* Z = multiplicacao(A, B);
-
+    Matriz* transpostaA = transposta(A);
+    
     printf("\nResultado da multiplicacao:\n");
     imprime_matriz(Z);
 
@@ -33,7 +34,7 @@ int main() {
     double diagoB = soma_diagonal_superior(B);
     printf("\na soma da diagonal superior da matriz \nA : %.1lf \nB : %.1lf\n",diagoA,diagoB);
   
-  
+    
     
     printf("\naltere um numero na matriz A:");
  
