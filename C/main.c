@@ -28,11 +28,6 @@ int main() {
     
     printf("\nResultado da multiplicacao:\n");
     imprime_matriz(Z);
-
-   
-    
-    
-
     
     double diagoA = soma_diagonal_superior(A);
     double diagoB = soma_diagonal_superior(B);
