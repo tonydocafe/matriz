@@ -112,7 +112,7 @@ void destroi_matriz(Matriz* M){
 void imprime_matriz(Matriz* M){
     for(int i = 0; i < M->m; i++){
         for(int j = 0; j < M->n; j++){
-            printf("%.1lf-",M->matriz[i][j]);
+            printf("%.1lf|",M->matriz[i][j]);
         }
         printf("\n");
     }
