@@ -45,10 +45,7 @@ int main() {
     printf("\naltere um numero na matriz B\nlinha:");
     scanf("%i",&linhaB);
     printf("coluna:");
-    scanf("%i",&colunaB);
-    printf("novo numero:");
-    scanf("%lf",&novoB);
-
+    
     altera_elemento(B);
 
     printf("\ndigite um escalar para multiplicar as matrizes:\n");
