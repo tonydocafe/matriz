@@ -35,7 +35,9 @@ int main() {
     printf("\nTransposta A:\n");
     imprime_matriz(transpostaA);
     
-
+    
+    printf("\nTransposta B:\n");
+    imprime_matriz(transpostaB);
     
     double diagoA = soma_diagonal_superior(A);
     double diagoB = soma_diagonal_superior(B);
