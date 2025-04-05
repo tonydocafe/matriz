@@ -158,11 +158,12 @@ Matriz* transposta(Matriz* M) {
 }
 
 void salva_matriz_arquivo(Matriz* M, const char* nomeArquivo) {
-    FILE* arquivo = fopen(nomeArquivo, "w");
+    FILE* arquivo = fopen(nomeArquivo, "a");  
     if (!arquivo) {
         printf("Erro ao abrir arquivo.\n");
         return;
     }
+
     fprintf(arquivo, "%d %d\n", M->m, M->n);
     for (int i = 0; i < M->m; i++) {
         for (int j = 0; j < M->n; j++) {
@@ -170,7 +171,10 @@ void salva_matriz_arquivo(Matriz* M, const char* nomeArquivo) {
         }
         fprintf(arquivo, "\n");
     }
+    fprintf(arquivo, "\n"); 
+
     fclose(arquivo);
+   
 }
 
 
