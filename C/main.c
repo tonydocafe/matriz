@@ -69,6 +69,9 @@ int main() {
     printf("\n A soma das matrizes fica:\n");
     imprime_matriz(S);
 
+    Matriz* T = subtrai_matriz(A,B);
+    
+
     
     destroi_matriz(A);
     destroi_matriz(B);
