@@ -29,6 +29,13 @@ int main() {
     printf("\nResultado da multiplicacao:\n");
     imprime_matriz(Z);
 
+    Matriz* transpostaA = transposta(A);
+    Matriz* transpostaB = transposta(B);
+    
+
+    
+
+    
     double diagoA = soma_diagonal_superior(A);
     double diagoB = soma_diagonal_superior(B);
     printf("\na soma da diagonal superior da matriz \nA : %.1lf \nB : %.1lf\n",diagoA,diagoB);
