@@ -55,22 +55,25 @@ Matriz* multiplicacao(Matriz* M,Matriz* N){
 
 
 void altera_elemento(Matriz* M, int m, int n, double novo_valor){
-    int  x = 10 ;
-   int recebe_n;
+  
+   int recebe_n = 1;
    
-    while (x == 10){
+    while (recebe_n > 0){
        
         if (m && n == 0){
             M->matriz[m][n] = novo_valor;
         }else{
             M->matriz[m-1][n-1] = novo_valor;
         }
-        
-        printf("Deseja ver a matriz te 9)\nDeseja Alterar mais numeros ?(Digite 10)\nDeseja continuar com a operações digite ? (Digite 0)\n");
 
-        M->matriz[m][n] = novo_valor;
-        printf("\nMatriz com novo valor fica:\n");
-        imprime_matriz(M);
+        printf("Deseja ver a matriz ?(Digite 1)\nDeseja Alterar mais numeros ?(Digite 2)\nDeseja continuar com as operações digite ? (Digite 0)\n");
+        scanf("%i",&recebe_n);
+        
+        if (recebe_n == 1){
+            printf("\nMatriz com novo valor fica:\n");    
+            imprime_matriz(M);
+        }
+
     }
 }
 
