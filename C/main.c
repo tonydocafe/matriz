@@ -47,7 +47,6 @@ int main() {
     
     printf("\naltere um numero na matriz A:");
  
-    scanf("%lf",&novoA);
     
     altera_elemento(A);
 
