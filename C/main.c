@@ -43,8 +43,7 @@ int main() {
 
     
     printf("\naltere um numero na matriz B\nlinha:");
-    scanf("%i",&linhaB);
-    printf("coluna:");
+
     
     altera_elemento(B);
 
