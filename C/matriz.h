@@ -13,7 +13,7 @@ void imprime_matriz(Matriz* M);
 void multiplicacao_escalar(Matriz* M, double escalar);
 double soma_diagonal_superior(Matriz* M);
 Matriz* multiplicacao(Matriz* M, Matriz* N);
-void altera_elemento(Matriz* M, int m, int n, double novo_valor);
+void altera_elemento(Matriz* M);
 Matriz* soma_matriz(Matriz* A, Matriz* B);
 Matriz* subtrai_matriz(Matriz* A, Matriz* B);
 Matriz* transposta(Matriz* M);
