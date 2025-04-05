@@ -65,6 +65,7 @@ int main() {
     imprime_matriz(transpostaB);
 
     Matriz* S = soma_matriz(A,B);
+    printf("\n A soma das matrizes fica:\n");
     
     destroi_matriz(A);
     destroi_matriz(B);
