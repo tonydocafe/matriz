@@ -49,7 +49,7 @@ int main() {
     printf("novo numero:");
     scanf("%lf",&novoB);
 
-    altera_elemento(B,linhaB,colunaB,novoB);
+    altera_elemento(B);
 
     printf("\ndigite um escalar para multiplicar as matrizes:\n");
     double escalar;
