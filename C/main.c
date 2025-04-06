@@ -89,7 +89,10 @@ int main() {
     printf("\nO determinante da Matriz B é:\n%lf \n", determinanteB);
 
 
-    
+    destroi_matriz(S);
+    destroi_matriz(T);
+    destroi_matriz(transpostaA);
+    destroi_matriz(transpostaB);
     destroi_matriz(A);
     destroi_matriz(B);
     destroi_matriz(Z);
