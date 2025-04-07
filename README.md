@@ -13,3 +13,4 @@ Ruby
 para executar:
 ---
 
+ruby main.rb
