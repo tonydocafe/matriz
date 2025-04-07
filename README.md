@@ -7,3 +7,5 @@ para executar :
 
 make 
 ./main
+
+RUby
