@@ -8,4 +8,4 @@ para executar :
 make 
 ./main
 
-RUby
+Ruby
