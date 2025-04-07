@@ -9,3 +9,5 @@ make
 ./main
 
 Ruby
+
+para executar:
