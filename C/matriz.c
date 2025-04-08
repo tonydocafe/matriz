@@ -279,3 +279,15 @@ double traco(Matriz* M) {
     return soma;
 }
 
+int eh_simetrica(Matriz* M) {
+    if (M->m != M->n) return 0;
+    for (int i = 0; i < M->m; i++) {
+        for (int j = 0; j < M->n; j++) {
+            if (M->matriz[i][j] != M->matriz[j][i])
+                return 0;
+        }
+    }
+    return 1;
+}
+
+
