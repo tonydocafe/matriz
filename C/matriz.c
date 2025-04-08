@@ -290,4 +290,22 @@ int eh_simetrica(Matriz* M) {
     return 1;
 }
 
+Matriz* potencia(Matriz* A, int expoente) {
+    if (A->m != A->n) {
+        printf("Erro: Potência só funciona com matrizes quadradas.\n");
+        return NULL;
+    }
+
+    Matriz* resultado = cria_matriz(A->m, A->n);
+    for (int i = 0; i < A->m; i++)
+        resultado->matriz[i][i] = 1;
+
+    for (int i = 0; i < expoente; i++) {
+        Matriz* temp = multiplicacao(resultado, A);
+        destroi_matriz(resultado);
+        resultado = temp;
+    }
+
+    return resultado;
+}
 
