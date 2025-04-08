@@ -111,8 +111,9 @@ int main() {
             printf("A matriz A não é nilpotente.\n");
     }
 
+    
 
-
+    printf("\n O traço da Matriz A é: %.2lf\n",traco(A));
     
 
     destroi_matriz(S);
