@@ -319,3 +319,18 @@ Matriz* oposta(Matriz* M) {
     return O;
 }
 
+Matriz* produto_hadamard(Matriz* A, Matriz* B) {
+    if (A->m != B->m || A->n != B->n) {
+        printf("Erro: Matrizes devem ter o mesmo tamanho para Hadamard.\n");
+        return NULL;
+    }
+
+    Matriz* H = cria_matriz(A->m, A->n);
+    for (int i = 0; i < A->m; i++) {
+        for (int j = 0; j < A->n; j++) {
+            H->matriz[i][j] = A->matriz[i][j] * B->matriz[i][j];
+        }
+    }
+    return H;
+}
+
