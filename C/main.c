@@ -111,17 +111,7 @@ int main() {
             printf("A matriz A não é nilpotente.\n");
     }
 
-    double traco(Matriz* M) {
-    if (M->m != M->n) {
-        printf("Traço só pode ser calculado para matrizes quadradas.\n");
-        return 0;
-    }
-    double soma = 0;
-    for (int i = 0; i < M->m; i++) {
-        soma += M->matriz[i][i];
-    }
-    return soma;
-}
+
 
     
 
