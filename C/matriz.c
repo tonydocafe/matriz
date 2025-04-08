@@ -228,4 +228,15 @@ double determinante(Matriz* M) {
     return det;
 }
 
+int eh_identidade(Matriz* M) {
+    if (M->m != M->n) return 0;
+    for (int i = 0; i < M->m; i++) {
+        for (int j = 0; j < M->n; j++) {
+            if ((i == j && M->matriz[i][j] != 1) || (i != j && M->matriz[i][j] != 0)) {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
 
