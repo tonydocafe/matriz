@@ -251,7 +251,6 @@ int eh_nilpotente(Matriz* A, int k) {
         destroi_matriz(resultado);
         resultado = temp;
     }
-
     int eh_zero = 1;
     for (int i = 0; i < resultado->m && eh_zero; i++) {
         for (int j = 0; j < resultado->n; j++) {
@@ -266,4 +265,17 @@ int eh_nilpotente(Matriz* A, int k) {
     return eh_zero;
 }
 
+
+
+double traco(Matriz* M) {
+    if (M->m != M->n) {
+        printf("Traço só pode ser calculado para matrizes quadradas.\n");
+        return 0;
+    }
+    double soma = 0;
+    for (int i = 0; i < M->m; i++) {
+        soma += M->matriz[i][i];
+    }
+    return soma;
+}
 
