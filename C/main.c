@@ -111,8 +111,20 @@ int main() {
             printf("A matriz A não é nilpotente.\n");
     }
 
-    
+     
+    if (eh_simetrica(A) {
+        printf("A matriz A é simétrica.\n");
+    } else {
+        printf("A matriz A não é simétrica.\n");
+    }
 
+    if (eh_simetrica(B) {
+        printf("A matriz B é simétrica.\n");
+    } else {
+        printf("A matriz B não é simétrica.\n");
+    }
+
+    
     printf("\n O traço da Matriz A é: %.2lf\n",traco(A));
     printf("\n O traço da Matriz B é: %.2lf\n",traco(B));
 
