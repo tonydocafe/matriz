@@ -114,7 +114,7 @@ int main() {
     
 
     printf("\n O traço da Matriz A é: %.2lf\n",traco(A));
-    
+    printf("\n O traço da Matriz B é: %.2lf\n",traco(B));
 
     destroi_matriz(S);
     destroi_matriz(T);
