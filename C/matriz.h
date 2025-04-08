@@ -22,5 +22,6 @@ void salva_matriz_arquivo(Matriz* M, const char* nomeArquivo);
 Matriz* lerMatrizDoArquivo(FILE *arquivo, int tam);
 int eh_identidade(Matriz* M);
 int eh_nilpotente(Matriz* A, int k);
+double traco(Matriz* M);
 
 #endif
