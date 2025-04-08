@@ -25,4 +25,5 @@ int eh_nilpotente(Matriz* A, int k);
 double traco(Matriz* M);
 int eh_simetrica(Matriz* M);
 Matriz* potencia(Matriz* A, int expoente);
+Matriz* oposta(Matriz* M);
 #endif
