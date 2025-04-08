@@ -94,6 +94,11 @@ int main() {
         printf("Não é matriz identidade.\n");
     }
 
+    if (eh_nilpotente(M, 3)) {
+    printf("A matriz é nilpotente (até k = 3)\n");
+    } else {
+        printf("A matriz não é nilpotente.\n");
+    }
 
     
     destroi_matriz(S);
