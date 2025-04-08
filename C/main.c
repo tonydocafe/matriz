@@ -143,6 +143,11 @@ int main() {
     imprime_matriz(OB);
 
 
+    Matriz* PAB = produto_hadamard(A,B);
+    printf("\nUsando o produto de hadamard na matriz A e B temos:\n(produto de elemente por elemento)\n");
+    imprime_matriz(PAB);
+    
+
     printf("\n O traço da Matriz A é: %.2lf\n",traco(A));
     printf("\n O traço da Matriz B é: %.2lf\n",traco(B));
 
