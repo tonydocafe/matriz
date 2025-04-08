@@ -88,7 +88,14 @@ int main() {
     double determinanteB = determinante(B);
     printf("\nO determinante da Matriz B é:\n%lf \n", determinanteB);
 
+    if (eh_identidade(M)) {
+    printf("É matriz identidade!\n");
+    } else {
+        printf("Não é matriz identidade.\n");
+    }
 
+
+    
     destroi_matriz(S);
     destroi_matriz(T);
     destroi_matriz(transpostaA);
