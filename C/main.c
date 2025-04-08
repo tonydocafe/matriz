@@ -123,7 +123,14 @@ int main() {
     } else {
         printf("A matriz B não é simétrica.\n");
     }
-
+    
+    Matriz* PA = potencia(A,2);
+    printf("\nA matriz A ao quadrado fica:\n");
+    imprime_matriz(PA);
+    
+    Matriz* PB = potencia(B,2);
+    printf("\nA matriz B ao quadrado fica:\n");
+    imprime_matriz(PB);
     
     printf("\n O traço da Matriz A é: %.2lf\n",traco(A));
     printf("\n O traço da Matriz B é: %.2lf\n",traco(B));
