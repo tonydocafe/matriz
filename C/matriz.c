@@ -309,3 +309,13 @@ Matriz* potencia(Matriz* A, int expoente) {
     return resultado;
 }
 
+Matriz* oposta(Matriz* M) {
+    Matriz* O = cria_matriz(M->m, M->n);
+    for (int i = 0; i < M->m; i++) {
+        for (int j = 0; j < M->n; j++) {
+            O->matriz[i][j] = -M->matriz[i][j];
+        }
+    }
+    return O;
+}
+
