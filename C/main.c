@@ -89,15 +89,15 @@ int main() {
     printf("\nO determinante da Matriz B é:\n%lf \n", determinanteB);
 
     if (eh_identidade(A)) {
-    printf("É matriz identidade!\n");
+    printf("A matriz A é identidade!\n");
     } else {
-        printf("Não é matriz identidade.\n");
+        printf("A matriz A não é identidade.\n");
     }
 
     if (eh_nilpotente(A, 3)) {
-    printf("A matriz é nilpotente (até k = 3)\n");
+    printf("A matriz A é nilpotente (até k = 3)\n");
     } else {
-        printf("A matriz não é nilpotente.\n");
+        printf("A matriz A não é nilpotente.\n");
     }
 
     
