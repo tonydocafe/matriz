@@ -20,6 +20,6 @@ Matriz* transposta(Matriz* M);
 double determinante(Matriz* M);
 void salva_matriz_arquivo(Matriz* M, const char* nomeArquivo);
 Matriz* lerMatrizDoArquivo(FILE *arquivo, int tam);
-   
+int eh_identidade(Matriz* M);   
 
 #endif
