@@ -240,3 +240,30 @@ int eh_identidade(Matriz* M) {
     return 1;
 }
 
+int eh_nilpotente(Matriz* A, int k) {
+    Matriz* resultado = cria_matriz(A->m, A->n);
+    for (int i = 0; i < A->m; i++)
+        for (int j = 0; j < A->n; j++)
+            resultado->matriz[i][j] = A->matriz[i][j];
+
+    for (int i = 1; i < k; i++) {
+        Matriz* temp = multiplicacao(resultado, A);
+        destroi_matriz(resultado);
+        resultado = temp;
+    }
+
+    int eh_zero = 1;
+    for (int i = 0; i < resultado->m && eh_zero; i++) {
+        for (int j = 0; j < resultado->n; j++) {
+            if (resultado->matriz[i][j] != 0) {
+                eh_zero = 0;
+                break;
+            }
+        }
+    }
+
+    destroi_matriz(resultado);
+    return eh_zero;
+}
+
+
