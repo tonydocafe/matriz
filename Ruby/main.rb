@@ -97,5 +97,13 @@ puts "B é identidade? #{B.identidade? ? 'Sim' : 'Não'}"
 puts "\nA é simétrica? #{A.simetrica? ? 'Sim' : 'Não'}"
 puts "B é simétrica? #{B.simetrica? ? 'Sim' : 'Não'}"
 
+puts "\nTraço de A: #{A.traco.round(1)}"
+puts "Traço de B: #{B.traco.round(1)}"
 
+puts "\nA ao quadrado:"
+potenciaA = A.potencia(2)
+potenciaA.imprime
 
+puts "\nB ao quadrado:"
+potenciaB = B.potencia(2)
+potenciaB.imprime
