@@ -164,6 +164,17 @@ class Matriz
     end
     true
   end
+    
+  def eh_identidade?
+    return false unless @m == @n
+    @m.times do |i|
+      @n.times do |j|
+        return false if i == j && @matriz[i][j] != 1
+        return false if i != j && @matriz[i][j] != 0
+      end
+    end
+    true
+  end
 
 
   
