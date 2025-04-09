@@ -146,4 +146,25 @@ class Matriz
     end
     nova
   end
+    
+  def eh_nilpotente?(k)
+    atual = self
+    k.times do
+      atual = Matriz.multiplicacao(atual, self)
+      return true if atual.nula?
+    end
+    false
+  end
+  
+  def nula?
+    @m.times do |i|
+      @n.times do |j|
+        return false unless @matriz[i][j] == 0
+      end
+    end
+    true
+  end
+
+
+  
 end
