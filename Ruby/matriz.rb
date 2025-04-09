@@ -176,26 +176,42 @@ class Matriz
     true
   end
 
-def traco
-  raise "Matriz não quadrada" unless @m == @n
-  soma = 0.0
-  @m.times { |i| soma += @matriz[i][i] }
-  soma
-end
-
-def eh_simetrica?
-  return false unless @m == @n
-  @m.times do |i|
-    @n.times do |j|
-      return false unless @matriz[i][j] == @matriz[j][i]
-    end
+  def traco
+    raise "Matriz não quadrada" unless @m == @n
+    soma = 0.0
+    @m.times { |i| soma += @matriz[i][i] }
+    soma
   end
-  true
-end
-
   
-
-
+  def eh_simetrica?
+    return false unless @m == @n
+    @m.times do |i|
+      @n.times do |j|
+        return false unless @matriz[i][j] == @matriz[j][i]
+      end
+    end
+    true
+  end
   
+  def oposta
+    resultado = Matriz.new(@m, @n)
+    @m.times do |i|
+      @n.times do |j|
+        resultado.matriz[i][j] = -@matriz[i][j]
+      end
+    end
+    resultado
+  end
+
+  def self.produto_hadamard(a, b)
+    raise "Tamanhos diferentes" unless a.m == b.m && a.n == b.n
+    resultado = Matriz.new(a.m, a.n)
+    a.m.times do |i|
+      a.n.times do |j|
+        resultado.matriz[i][j] = a.matriz[i][j] * b.matriz[i][j]
+      end
+    end
+    resultado
+  end
   
 end
