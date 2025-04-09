@@ -89,3 +89,13 @@ puts "\nDeterminante: #{A.determinante}"
 puts "\nDeterminante B:"
 B.imprime
 puts "\nDeterminante: #{B.determinante}"
+
+
+puts "\nA é identidade? #{A.identidade? ? 'Sim' : 'Não'}"
+puts "B é identidade? #{B.identidade? ? 'Sim' : 'Não'}"
+
+puts "\nA é simétrica? #{A.simetrica? ? 'Sim' : 'Não'}"
+puts "B é simétrica? #{B.simetrica? ? 'Sim' : 'Não'}"
+
+
+
