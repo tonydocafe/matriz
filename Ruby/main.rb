@@ -107,3 +107,22 @@ potenciaA.imprime
 puts "\nB ao quadrado:"
 potenciaB = B.potencia(2)
 potenciaB.imprime
+
+puts "\nA é nilpotente até k=3? #{A.nilpotente?(3) ? 'Sim' : 'Não'}"
+puts "B é nilpotente até k=3? #{B.nilpotente?(3) ? 'Sim' : 'Não'}"
+
+
+puts "\nMatriz oposta de A:"
+A.oposta.imprime
+
+puts "\nMatriz oposta de B:"
+B.oposta.imprime
+
+
+
+puts "\nProduto de Hadamard entre A e B:"
+hadamard = A.hadamard(B)
+hadamard.imprime
+
+
+
