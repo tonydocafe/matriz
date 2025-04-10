@@ -22,14 +22,14 @@ Operações clássicas de álgebra linear, como:
 
 Tudo isso em:
 
-- 🐍 **Ruby** – Código limpo, elegante e fácil de ler.
-- ⚙️ **C** – Código rápido, direto ao ponto, pra quem curte sujar as mãos com ponteiros 💪
+- 🐍 **Ruby** – Para os elegantes: legível, direto, quase um poema.
+- ⚙️ **C** – Para os guerreiros: ponteiros, suor e glória.
+- 🧱 **C++** – Para os engenheiros do código: OO, templates e herança (não a de família).
+
 
 ---
 
 ## 📁 Estrutura do projeto
-
-
 
 # C
 
@@ -45,3 +45,12 @@ para executar:
 ---
 
 ruby main.rb
+
+
+# C++
+
+para executar :
+------
+
+make
+./programa_matriz
