@@ -38,3 +38,13 @@ Para executar:
 ```bash
 make
 ./main
+
+
+### Ruby
+
+Para executar:
+
+```bash
+ruby main.rb
+
+
