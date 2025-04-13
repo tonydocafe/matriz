@@ -22,3 +22,15 @@ class Matriz:
                 for j in range(i + 1, self.n):
                     soma += self.matriz[i][j]
             return soma
+ @staticmethod
+    def multiplicacao(a, b):
+        if a.n != b.m:
+            raise ValueError("Dimensões incompatíveis")
+        resultado = Matriz(a.m, b.n)
+        for i in range(a.m):
+            for j in range(b.n):
+                soma = 0.0
+                for k in range(a.n):
+                    soma += a.matriz[i][k] * b.matriz[k][j]
+                resultado.matriz[i][j] = soma
+        return resultado
