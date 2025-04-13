@@ -82,3 +82,10 @@ soma = Matriz.soma(A, B)
 print("\nA soma das matrizes é:")
 soma.imprime()
 soma.salva_em_arquivo("saida.txt")
+
+
+subtracao = Matriz.subtrai(A, B)
+print("\nA subtração das matrizes é:")
+subtracao.imprime()
+subtracao.salva_em_arquivo("saida.txt")
+
