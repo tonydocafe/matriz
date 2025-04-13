@@ -82,3 +82,10 @@ class Matriz:
                 resultado.matriz[i][j] = a.matriz[i][j] - b.matriz[i][j]
         return resultado
 
+    def transposta(self):
+            resultado = Matriz(self.n, self.m)
+            for i in range(self.m):
+                for j in range(self.n):
+                    resultado.matriz[j][i] = self.matriz[i][j]
+            return resultado
+    
