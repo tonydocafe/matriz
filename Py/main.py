@@ -44,5 +44,10 @@ print("\nSoma da diagonal superior:")
 print(f"A: {round(diagoA, 1)}")
 print(f"B: {round(diagoB, 1)}")
 
+print("\nAltere um número na matriz A:")
+A.alterar_elemento()
+
+print("\nAltere um número na matriz B:")
+B.alterar_elemento()
 
 
