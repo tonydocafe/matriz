@@ -34,3 +34,17 @@ class Matriz:
                         soma += a.matriz[i][k] * b.matriz[k][j]
                     resultado.matriz[i][j] = soma
             return resultado
+
+
+    def alterar_elemento(self):
+        while True:
+            m = int(input("linha: "))
+            n = int(input("coluna: "))
+            valor = float(input("novo número: "))
+            self.matriz[m - 1][n - 1] = valor
+
+            opcao = int(input("Deseja ver a matriz? (1), alterar mais? (2), sair? (0): "))
+            if opcao == 1:
+                self.imprime()
+            if opcao == 0:
+                break
