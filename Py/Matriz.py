@@ -97,4 +97,47 @@ class Matriz:
                 f.write(" ".join(f"{e:.2f}" for e in linha) + "\n")
             f.write("\n")
 
-    
+    def determinante(self):
+        if self.m != self.n:
+            raise ValueError("Matriz não quadrada")
+        if self.m == 1:
+            return self.matriz[0][0]
+        if self.m == 2:
+            return self.matriz[0][0] * self.matriz[1][1] - self.matriz[0][1] * self.matriz[1][0]
+
+        det = 0.0
+        for j in range(self.n):
+            sub = self.submatriz(0, j)
+            det += ((-1) ** j) * self.matriz[0][j] * sub.determinante()
+        return det
+
+    def submatriz(self, linha_excluida, coluna_excluida):
+        nova = Matriz(self.m - 1, self.n - 1)
+        nova_linha = 0
+        for i, linha in enumerate(self.matriz):
+            if i == linha_excluida:
+                continue
+            nova_coluna = 0
+            for j, valor in enumerate(linha):
+                if j == coluna_excluida:
+                    continue
+                nova.matriz[nova_linha][nova_coluna] = valor
+                nova_coluna += 1
+            nova_linha += 1
+        return nova
+
+    def eh_nilpotente(self, k):
+        atual = self
+        for _ in range(k):
+            atual = Matriz.multiplicacao(atual, self)
+            if atual.nula():
+                return True
+        return False
+
+    def nula(self):
+        for i in range(self.m):
+            for j in range(self.n):
+                if self.matriz[i][j] != 0:
+                    return False
+        return True
+
