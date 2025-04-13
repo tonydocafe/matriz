@@ -121,3 +121,7 @@ print(f"B é nilpotente até k=3? {'Sim' if B.eh_nilpotente(3) else 'Não'}")
 
 print("\nMatriz oposta de A:")
 A.oposta().imprime()
+
+print("\nMatriz oposta de B:")
+B.oposta().imprime()
+
