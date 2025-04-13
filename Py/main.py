@@ -101,5 +101,10 @@ print(f"\nDeterminante: {B.determinante()}")
 print(f"\nA é identidade? {'Sim' if A.eh_identidade() else 'Não'}")
 print(f"B é identidade? {'Sim' if B.eh_identidade() else 'Não'}")
 
+print(f"\nA é simétrica? {'Sim' if A.eh_simetrica() else 'Não'}")
+print(f"B é simétrica? {'Sim' if B.eh_simetrica() else 'Não'}")
+
+print(f"\nTraço de A: {round(A.traco(), 1)}")
+print(f"Traço de B: {round(B.traco(), 1)}")
 
 
