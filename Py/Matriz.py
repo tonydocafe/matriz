@@ -72,4 +72,13 @@ class Matriz:
                 resultado.matriz[i][j] = a.matriz[i][j] + b.matriz[i][j]
         return resultado
 
-    
+     @staticmethod
+    def subtrai(a, b):
+        if a.m != b.m or a.n != b.n:
+            raise ValueError("Tamanhos diferentes")
+        resultado = Matriz(a.m, a.n)
+        for i in range(a.m):
+            for j in range(a.n):
+                resultado.matriz[i][j] = a.matriz[i][j] - b.matriz[i][j]
+        return resultado
+
