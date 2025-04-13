@@ -98,4 +98,8 @@ print("\nDeterminante B:")
 B.imprime()
 print(f"\nDeterminante: {B.determinante()}")
 
+print(f"\nA é identidade? {'Sim' if A.eh_identidade() else 'Não'}")
+print(f"B é identidade? {'Sim' if B.eh_identidade() else 'Não'}")
+
+
 
