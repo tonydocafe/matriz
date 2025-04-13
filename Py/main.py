@@ -76,3 +76,9 @@ transpostaA.salva_em_arquivo("saida.txt")
 print("\nTransposta B:")
 transpostaB.imprime()
 transpostaB.salva_em_arquivo("saida.txt")
+
+
+soma = Matriz.soma(A, B)
+print("\nA soma das matrizes é:")
+soma.imprime()
+soma.salva_em_arquivo("saida.txt")
