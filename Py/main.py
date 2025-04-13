@@ -52,3 +52,6 @@ B.alterar_elemento()
 
 escalar = float(input("\nDigite um escalar para multiplicar as matrizes:\n"))
 
+A.multiplicacao_escalar(escalar)
+print(f"\nMatriz A * {escalar}:")
+A.imprime()
