@@ -125,3 +125,6 @@ A.oposta().imprime()
 print("\nMatriz oposta de B:")
 B.oposta().imprime()
 
+print("\nProduto de Hadamard entre A e B:")
+hadamard = Matriz.produto_hadamard(A, B)
+hadamard.imprime()
