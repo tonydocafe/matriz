@@ -141,3 +141,45 @@ class Matriz:
                     return False
         return True
 
+
+     def eh_identidade(self):
+            if self.m != self.n:
+                return False
+            for i in range(self.m):
+                for j in range(self.n):
+                    if i == j and self.matriz[i][j] != 1:
+                        return False
+                    if i != j and self.matriz[i][j] != 0:
+                        return False
+            return True
+
+    def traco(self):
+        if self.m != self.n:
+            raise ValueError("Matriz não quadrada")
+        return sum(self.matriz[i][i] for i in range(self.m))
+
+    def eh_simetrica(self):
+        if self.m != self.n:
+            return False
+        for i in range(self.m):
+            for j in range(self.n):
+                if self.matriz[i][j] != self.matriz[j][i]:
+                    return False
+        return True
+
+    def oposta(self):
+        resultado = Matriz(self.m, self.n)
+        for i in range(self.m):
+            for j in range(self.n):
+                resultado.matriz[i][j] = -self.matriz[i][j]
+        return resultado
+
+    @staticmethod
+    def produto_hadamard(a, b):
+        if a.m != b.m or a.n != b.n:
+            raise ValueError("Tamanhos diferentes")
+        resultado = Matriz(a.m, a.n)
+        for i in range(a.m):
+            for j in range(a.n):
+                resultado.matriz[i][j] = a.matriz[i][j] * b.matriz[i][j]
+        return resultado
