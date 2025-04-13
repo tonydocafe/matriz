@@ -94,5 +94,8 @@ print("\nDeterminante A:")
 A.imprime()
 print(f"\nDeterminante: {A.determinante()}")
 
+print("\nDeterminante B:")
+B.imprime()
+print(f"\nDeterminante: {B.determinante()}")
 
 
