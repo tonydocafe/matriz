@@ -57,6 +57,6 @@ class Matriz:
             if opcao == 0:
                 break
 
-def imprime(self):
-        for linha in self.matriz:
-            print(" | ".join(f"{e:.1f}" for e in linha))
+    def imprime(self):
+            for linha in self.matriz:
+                print(" | ".join(f"{e:.1f}" for e in linha))
