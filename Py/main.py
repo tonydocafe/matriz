@@ -89,3 +89,10 @@ print("\nA subtração das matrizes é:")
 subtracao.imprime()
 subtracao.salva_em_arquivo("saida.txt")
 
+
+print("\nDeterminante A:")
+A.imprime()
+print(f"\nDeterminante: {A.determinante()}")
+
+
+
