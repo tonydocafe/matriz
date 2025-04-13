@@ -63,3 +63,9 @@ transpostaB = B.transposta()
 B.multiplicacao_escalar(escalar)
 print(f"\nMatriz B * {escalar}:")
 B.imprime()
+
+
+print("\nTransposta A:")
+transpostaA.imprime()
+transpostaA.salva_em_arquivo("saida.txt")
+
