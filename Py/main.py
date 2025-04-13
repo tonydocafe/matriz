@@ -36,3 +36,13 @@ B.imprime()
 Z = Matriz.multiplicacao(A, B)
 print("\nResultado da multiplicação:")
 Z.imprime()
+
+
+diagoA = A.soma_diagonal_superior()
+diagoB = B.soma_diagonal_superior()
+print("\nSoma da diagonal superior:")
+print(f"A: {round(diagoA, 1)}")
+print(f"B: {round(diagoB, 1)}")
+
+
+
