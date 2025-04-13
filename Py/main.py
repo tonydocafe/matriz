@@ -14,4 +14,20 @@ def ler_duas_matrizes(caminho):
     for i in range(tam_b):
         matriz_b.matriz[i] = list(map(float, linhas.pop(0).split()))
     
+
     return matriz_a, matriz_b
+arquivo = "entrada.txt"
+
+try:
+    with open(arquivo): pass
+except FileNotFoundError:
+    print("Erro ao abrir o arquivo.")
+    exit(1)
+
+A, B = ler_duas_matrizes(arquivo)
+
+print("Matriz A:")
+A.imprime()
+
+print("\nMatriz B:")
+B.imprime()
