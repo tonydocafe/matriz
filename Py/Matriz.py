@@ -88,4 +88,13 @@ class Matriz:
                 for j in range(self.n):
                     resultado.matriz[j][i] = self.matriz[i][j]
             return resultado
+
+
+    def salva_em_arquivo(self, nome_arquivo):
+        with open(nome_arquivo, 'a') as f:
+            f.write(f"{self.m} {self.n}\n")
+            for linha in self.matriz:
+                f.write(" ".join(f"{e:.2f}" for e in linha) + "\n")
+            f.write("\n")
+
     
