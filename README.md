@@ -35,16 +35,22 @@ Tudo isso em:
 
 Para executar:
 
-```bash
 make
 ./main
-´´´
+
 
 ### Ruby
 
 Para executar:
 
-```bash
 ruby main.rb
 
+Para executar:
 
+make
+./programa_matriz
+
+Python
+Para executar:
+
+python main.py
