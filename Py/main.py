@@ -107,4 +107,10 @@ print(f"B é simétrica? {'Sim' if B.eh_simetrica() else 'Não'}")
 print(f"\nTraço de A: {round(A.traco(), 1)}")
 print(f"Traço de B: {round(B.traco(), 1)}")
 
+print("\nA ao quadrado:")
+potenciaA = Matriz.multiplicacao(A, A)
+potenciaA.imprime()
 
+print("\nB ao quadrado:")
+potenciaB = Matriz.multiplicacao(B, B)
+potenciaB.imprime()
