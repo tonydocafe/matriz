@@ -73,3 +73,6 @@ print("\nTransposta A:")
 transpostaA.imprime()
 transpostaA.salva_em_arquivo("saida.txt")
 
+print("\nTransposta B:")
+transpostaB.imprime()
+transpostaB.salva_em_arquivo("saida.txt")
