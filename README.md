@@ -22,7 +22,7 @@ Operações clássicas de álgebra linear, como:
 
 Tudo isso em:
 
-- 🐍 **Ruby** – Para os elegantes: legível, direto, quase um poema.
+- ♦️ **Ruby** – Para os elegantes: legível, direto, quase um poema.
 - ⚙️ **C** – Para os guerreiros: ponteiros, suor e glória.
 - 🧱 **C++** – Para os engenheiros do código: OO, templates e herança (não a de família).
 - 🐍 **Python** – Para os pragmáticos: simples, rápido e com café.
