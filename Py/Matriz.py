@@ -17,12 +17,12 @@ class Matriz:
 
 
 
- def multiplicacao_escalar(self, escalar):
+   def multiplicacao_escalar(self, escalar):
         for i in range(self.m):
             for j in range(self.n):
                 self.matriz[i][j] *= escalar
                 
-  def soma_diagonal_superior(self):
+   def soma_diagonal_superior(self):
         soma = 0.0
         for i in range(self.m):
             for j in range(i + 1, self.n):
@@ -30,7 +30,7 @@ class Matriz:
         return soma
 
 
-     @staticmethod
+    @staticmethod
     def multiplicacao(a, b):
         if a.n != b.m:
             raise ValueError("Dimensões incompatíveis")
@@ -62,7 +62,7 @@ class Matriz:
                 print(" | ".join(f"{e:.1f}" for e in linha))
 
 
-  @staticmethod
+    @staticmethod
     def soma(a, b):
         if a.m != b.m or a.n != b.n:
             raise ValueError("Tamanhos diferentes")
@@ -73,7 +73,7 @@ class Matriz:
         return resultado
 
      @staticmethod
-    def subtrai(a, b):
+     def subtrai(a, b):
         if a.m != b.m or a.n != b.n:
             raise ValueError("Tamanhos diferentes")
         resultado = Matriz(a.m, a.n)
