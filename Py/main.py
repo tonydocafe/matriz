@@ -31,3 +31,8 @@ A.imprime()
 
 print("\nMatriz B:")
 B.imprime()
+
+
+Z = Matriz.multiplicacao(A, B)
+print("\nResultado da multiplicação:")
+Z.imprime()
