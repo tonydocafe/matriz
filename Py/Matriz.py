@@ -17,31 +17,31 @@ class Matriz:
 
 
 
-     def multiplicacao_escalar(self, escalar):
-            for i in range(self.m):
-                for j in range(self.n):
-                    self.matriz[i][j] *= escalar
-                    
-      def soma_diagonal_superior(self):
-            soma = 0.0
-            for i in range(self.m):
-                for j in range(i + 1, self.n):
-                    soma += self.matriz[i][j]
-            return soma
+ def multiplicacao_escalar(self, escalar):
+        for i in range(self.m):
+            for j in range(self.n):
+                self.matriz[i][j] *= escalar
+                
+  def soma_diagonal_superior(self):
+        soma = 0.0
+        for i in range(self.m):
+            for j in range(i + 1, self.n):
+                soma += self.matriz[i][j]
+        return soma
 
 
      @staticmethod
-        def multiplicacao(a, b):
-            if a.n != b.m:
-                raise ValueError("Dimensões incompatíveis")
-            resultado = Matriz(a.m, b.n)
-            for i in range(a.m):
-                for j in range(b.n):
-                    soma = 0.0
-                    for k in range(a.n):
-                        soma += a.matriz[i][k] * b.matriz[k][j]
-                    resultado.matriz[i][j] = soma
-            return resultado
+    def multiplicacao(a, b):
+        if a.n != b.m:
+            raise ValueError("Dimensões incompatíveis")
+        resultado = Matriz(a.m, b.n)
+        for i in range(a.m):
+            for j in range(b.n):
+                soma = 0.0
+                for k in range(a.n):
+                    soma += a.matriz[i][k] * b.matriz[k][j]
+                resultado.matriz[i][j] = soma
+        return resultado
 
 
     def alterar_elemento(self):
@@ -60,3 +60,16 @@ class Matriz:
     def imprime(self):
             for linha in self.matriz:
                 print(" | ".join(f"{e:.1f}" for e in linha))
+
+
+  @staticmethod
+    def soma(a, b):
+        if a.m != b.m or a.n != b.n:
+            raise ValueError("Tamanhos diferentes")
+        resultado = Matriz(a.m, a.n)
+        for i in range(a.m):
+            for j in range(a.n):
+                resultado.matriz[i][j] = a.matriz[i][j] + b.matriz[i][j]
+        return resultado
+
+    
