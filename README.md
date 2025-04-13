@@ -32,7 +32,6 @@ Tudo isso em:
 ## 📁 Estrutura do projeto
 
 ### C
-
 Para executar:
 
 make
@@ -40,17 +39,18 @@ make
 
 
 ### Ruby
-
 Para executar:
 
 ruby main.rb
 
+### C++
 Para executar:
 
 make
 ./programa_matriz
 
-Python
+
+### Python
 Para executar:
 
 python main.py
