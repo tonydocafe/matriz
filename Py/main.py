@@ -56,6 +56,10 @@ A.multiplicacao_escalar(escalar)
 print(f"\nMatriz A * {escalar}:")
 A.imprime()
 
+B.multiplicacao_escalar(escalar)
+print(f"\nMatriz B * {escalar}:")
+B.imprime()
+
 transpostaA = A.transposta()
 transpostaB = B.transposta()
 
