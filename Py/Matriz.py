@@ -12,3 +12,7 @@ class Matriz:
         for i in range(tamanho):
             matriz.matriz[i] = list(map(float, linhas[i].split()))
         return matriz
+     def multiplicacao_escalar(self, escalar):
+            for i in range(self.m):
+                for j in range(self.n):
+                    self.matriz[i][j] *= escalar
