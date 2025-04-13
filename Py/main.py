@@ -114,3 +114,10 @@ potenciaA.imprime()
 print("\nB ao quadrado:")
 potenciaB = Matriz.multiplicacao(B, B)
 potenciaB.imprime()
+
+
+print(f"\nA é nilpotente até k=3? {'Sim' if A.eh_nilpotente(3) else 'Não'}")
+print(f"B é nilpotente até k=3? {'Sim' if B.eh_nilpotente(3) else 'Não'}")
+
+print("\nMatriz oposta de A:")
+A.oposta().imprime()
