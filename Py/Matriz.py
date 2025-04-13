@@ -16,3 +16,9 @@ class Matriz:
             for i in range(self.m):
                 for j in range(self.n):
                     self.matriz[i][j] *= escalar
+      def soma_diagonal_superior(self):
+            soma = 0.0
+            for i in range(self.m):
+                for j in range(i + 1, self.n):
+                    soma += self.matriz[i][j]
+            return soma
