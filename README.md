@@ -4,6 +4,7 @@
 
 ---
 
+
 ## 💡 O que tem aqui?
 
 Operações clássicas de álgebra linear, como:
