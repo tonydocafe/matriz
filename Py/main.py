@@ -128,3 +128,12 @@ B.oposta().imprime()
 print("\nProduto de Hadamard entre A e B:")
 hadamard = Matriz.produto_hadamard(A, B)
 hadamard.imprime()
+
+
+inversaA = A.inversa_gauss_jordan()
+if inversaA:
+    print("\nInversa da matriz A:")
+    inversaA.imprime()
+    inversaA.salva_em_arquivo("saida.txt")
+
+
