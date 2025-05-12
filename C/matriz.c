@@ -333,4 +333,76 @@ Matriz* produto_hadamard(Matriz* A, Matriz* B) {
     }
     return H;
 }
+Matriz* inversa_gauss_jordan(Matriz* A) {
+    if (A->m != A->n) {
+        printf("Erro: A inversa só pode ser calculada para matrizes quadradas.\n");
+        return NULL;
+    }
 
+    int n = A->m;
+    Matriz* I = cria_matriz(n, n);
+    Matriz* AI = cria_matriz(n, 2 * n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            AI->matriz[i][j] = A->matriz[i][j];
+            AI->matriz[i][j + n] = (i == j) ? 1.0 : 0.0;
+        }
+    }
+
+    printf("Matriz aumentada inicial [A | I]:\n");
+    imprime_matriz(AI);
+
+    for (int i = 0; i < n; i++) {
+       
+        if (AI->matriz[i][i] == 0.0) {
+            int trocou = 0;
+            for (int k = i + 1; k < n; k++) {
+                if (AI->matriz[k][i] != 0.0) {
+                    double* temp = AI->matriz[i];
+                    AI->matriz[i] = AI->matriz[k];
+                    AI->matriz[k] = temp;
+                    trocou = 1;
+                    printf("\nTrocou linha %d com linha %d:\n", i + 1, k + 1);
+                    imprime_matriz(AI);
+                    break;
+                }
+            }
+            if (!trocou) {
+                printf("Erro: Matriz singular, não possui inversa.\n");
+                destroi_matriz(AI);
+                destroi_matriz(I);
+                return NULL;
+            }
+        }
+
+        double pivo = AI->matriz[i][i];
+        for (int j = 0; j < 2 * n; j++) {
+            AI->matriz[i][j] /= pivo;
+        }
+        printf("\nLinha %d dividida pelo pivô %.2lf:\n", i + 1, pivo);
+        imprime_matriz(AI);
+
+    
+        for (int k = 0; k < n; k++) {
+            if (k != i) {
+                double fator = AI->matriz[k][i];
+                for (int j = 0; j < 2 * n; j++) {
+                    AI->matriz[k][j] -= fator * AI->matriz[i][j];
+                }
+                printf("\nEliminou elemento da linha %d usando linha %d (fator: %.2lf):\n", k + 1, i + 1, fator);
+                imprime_matriz(AI);
+            }
+        }
+    }
+
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            I->matriz[i][j] = AI->matriz[i][j + n];
+        }
+    }
+
+    destroi_matriz(AI);
+    return I;
+}
