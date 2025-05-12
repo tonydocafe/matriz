@@ -151,6 +151,19 @@ int main() {
     printf("\n O traço da Matriz A é: %.2lf\n",traco(A));
     printf("\n O traço da Matriz B é: %.2lf\n",traco(B));
 
+    Matriz* inv = inversa_gauss_jordan(A);
+    if (inv != NULL) {
+        printf("\nMatriz inversa:\n");
+        imprime_matriz(inv);
+        destroi_matriz(inv);
+    }
+    Matriz* inv = inversa_gauss_jordan(B);
+    if (inv != NULL) {
+        printf("\nMatriz inversa:\n");
+        imprime_matriz(inv);
+        destroi_matriz(inv);
+    }
+    
     destroi_matriz(S);
     destroi_matriz(T);
     destroi_matriz(transpostaA);
