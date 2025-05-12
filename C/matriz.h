@@ -27,4 +27,5 @@ int eh_simetrica(Matriz* M);
 Matriz* potencia(Matriz* A, int expoente);
 Matriz* oposta(Matriz* M);
 Matriz* produto_hadamard(Matriz* A, Matriz* B);
+Matriz* inversa_gauss_jordan(Matriz* A) ;
 #endif
