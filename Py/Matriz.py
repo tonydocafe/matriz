@@ -234,3 +234,10 @@ def inversa_gauss_jordan(self):
 
     return inversa
 
+
+    @staticmethod
+    def imprime_matriz_estatica(matriz):
+        for linha in matriz:
+            print(" | ".join(f"{x:8.2f}" for x in linha))
+        print()
+    
