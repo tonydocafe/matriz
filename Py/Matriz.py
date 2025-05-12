@@ -183,3 +183,54 @@ class Matriz:
             for j in range(a.n):
                 resultado.matriz[i][j] = a.matriz[i][j] * b.matriz[i][j]
         return resultado
+
+
+def inversa_gauss_jordan(self):
+    if self.m != self.n:
+        print("Erro: A inversa só pode ser calculada para matrizes quadradas.")
+        return None
+
+    n = self.m
+    AI = [[0.0 for _ in range(2 * n)] for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            AI[i][j] = self.matriz[i][j]
+            AI[i][j + n] = 1.0 if i == j else 0.0
+
+    print("Matriz aumentada inicial [A | I]:")
+    Matriz.imprime_matriz_estatica(AI)
+
+    for i in range(n):
+        if AI[i][i] == 0.0:
+            trocou = False
+            for k in range(i + 1, n):
+                if AI[k][i] != 0.0:
+                    AI[i], AI[k] = AI[k], AI[i]
+                    trocou = True
+                    print(f"\nTrocou linha {i + 1} com linha {k + 1}:")
+                    Matriz.imprime_matriz_estatica(AI)
+                    break
+            if not trocou:
+                print("Erro: Matriz singular, não possui inversa.")
+                return None
+
+        pivo = AI[i][i]
+        AI[i] = [x / pivo for x in AI[i]]
+        print(f"\nLinha {i + 1} dividida pelo pivô {pivo:.2f}:")
+        Matriz.imprime_matriz_estatica(AI)
+
+        for k in range(n):
+            if k != i:
+                fator = AI[k][i]
+                AI[k] = [AI[k][j] - fator * AI[i][j] for j in range(2 * n)]
+                print(f"\nEliminou elemento da linha {k + 1} usando linha {i + 1} (fator: {fator:.2f}):")
+                Matriz.imprime_matriz_estatica(AI)
+
+    inversa = Matriz(n, n)
+    for i in range(n):
+        for j in range(n):
+            inversa.matriz[i][j] = AI[i][j + n]
+
+    return inversa
+
