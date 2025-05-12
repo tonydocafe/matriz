@@ -136,4 +136,9 @@ if inversaA:
     inversaA.imprime()
     inversaA.salva_em_arquivo("saida.txt")
 
+inversaB = B.inversa_gauss_jordan()
+if inversaB:
+    print("\nInversa da matriz B:")
+    inversaB.imprime()
+    inversaB.salva_em_arquivo("saida.txt")
 
