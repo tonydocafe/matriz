@@ -26,6 +26,68 @@ unless File.exist?(arquivo)
   exit 1
 end
 
+
+def inversa_passo_a_passo
+  raise "Matriz não é quadrada!" unless @linhas == @colunas
+
+  n = @linhas
+  a = Marshal.load(Marshal.dump(@matriz))  # cópia profunda da matriz original
+  identidade = Array.new(n) { |i| Array.new(n, 0.0).tap { |row| row[i] = 1.0 } }
+
+  puts "\n--- Início do cálculo da inversa (Gauss-Jordan) ---"
+
+  n.times do |i|
+    # Verifica se o pivô é zero
+    if a[i][i] == 0
+      trocado = false
+      (i + 1).upto(n - 1) do |j|
+        if a[j][i] != 0
+          a[i], a[j] = a[j], a[i]
+          identidade[i], identidade[j] = identidade[j], identidade[i]
+          puts "\nTrocando linha #{i} com linha #{j}:"
+          trocado = true
+          break
+        end
+      end
+      raise "Matriz não possui inversa (pivô zero irremovível)" unless trocado
+    end
+
+    pivô = a[i][i]
+    n.times do |j|
+      a[i][j] /= pivô
+      identidade[i][j] /= pivô
+    end
+    puts "\nLinha #{i} dividida por #{pivô}:"
+    imprime_matrizes_lado_a_lado(a, identidade)
+
+    n.times do |k|
+      next if k == i
+      fator = a[k][i]
+      n.times do |j|
+        a[k][j] -= fator * a[i][j]
+        identidade[k][j] -= fator * identidade[i][j]
+      end
+      puts "\nEliminando elemento da linha #{k}, coluna #{i}:"
+      imprime_matrizes_lado_a_lado(a, identidade)
+    end
+  end
+
+  puts "\n--- Fim do cálculo da inversa ---"
+  m = Matriz.new(n, n)
+  m.matriz = identidade
+  m
+end
+
+def imprime_matrizes_lado_a_lado(a, b)
+  a.each_with_index do |linha_a, i|
+    linha_b = b[i]
+    puts "#{linha_a.map { |e| "%7.2f" % e }.join(" ")}  |  #{linha_b.map { |e| "%7.2f" % e }.join(" ")}"
+  end
+end
+
+
+
+
 A, B = ler_duas_matrizes(arquivo)
 
 puts "Matriz A:"
