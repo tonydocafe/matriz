@@ -65,7 +65,7 @@ void escalonar_reduzida(float mat[MAX][MAX], int lin, int col) {
             print_matriz(mat, lin, col);
         }
 
-        // Zerar acima e abaixo do pivô
+      
         for (int i = 0; i < lin; i++) {
             if (i != linha_pivo && fabs(mat[i][j]) > EPS) {
                 float fator = -mat[i][j];
